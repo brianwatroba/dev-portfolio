@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
-    marginTop: theme.spacing(3),
   },
   avatar: {
     borderRadius: '100%',
