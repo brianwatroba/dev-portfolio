@@ -9,13 +9,14 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: '#F9F9F9',
-    borderRadius: '4px',
+    borderRadius: '12px',
     display: 'inline-block',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
-    marginTop: theme.spacing(3),
+    position: 'relative',
+    border: 'solid 10px white',
   },
   avatar: {
     borderRadius: '100%',
@@ -38,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
       width: '225px',
     },
   },
-  typography: {},
   textBubbleTop: {
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(5),
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     borderRadius: '20px 20px 0px 0px',
     fontStyle: 'italic',
+    position: 'relative',
   },
   textBubbleBottom: {
     paddingLeft: theme.spacing(3),
