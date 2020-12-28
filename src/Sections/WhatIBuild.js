@@ -34,7 +34,7 @@ const WhatIBuild = () => {
   const typingRef = useRef();
 
   useLayoutEffect(() => {
-    var options = {
+    var words = {
       strings: [
         'ourselves',
         'each other',
@@ -50,7 +50,7 @@ const WhatIBuild = () => {
       loop: true,
       smartBackspace: false,
     };
-    const typed = new Typed(typingRef.current, options);
+    const typed = new Typed(typingRef.current, words);
     return () => {
       typed.stop();
     };

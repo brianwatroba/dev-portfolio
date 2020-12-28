@@ -4,8 +4,8 @@ import { Paper, Typography, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
     paddingRight: theme.spacing(4),
     paddingLeft: theme.spacing(4),
     position: 'relative',
@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
   cardTitle: {
     display: 'flex',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(0.75),
+    paddingBottom: theme.spacing(0.75),
     paddingRight: theme.spacing(3),
     paddingLeft: theme.spacing(3),
     backgroundColor: '#FFEDD2',
     borderRadius: '50px',
-    marginBottom: theme.spacing(-2.5),
+    marginBottom: theme.spacing(-2),
     position: 'relative',
     zIndex: '2',
     fontWeight: '300',
