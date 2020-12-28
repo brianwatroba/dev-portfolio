@@ -12,19 +12,27 @@ import MenuIcon from '@material-ui/icons/MenuRounded';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    positive: 'relative',
+    zIndex: '1',
   },
   menuButton: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(1),
     fontColor: 'black',
+    positive: 'relative',
+    zIndex: '2',
   },
   appBar: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
     boxShadow: 'none',
+    position: 'relative',
+    zIndex: '2',
   },
   toolBar: {
     display: 'flex',
     justifyContent: 'flex-end',
+    positive: 'relative',
+    zIndex: '2',
   },
 }));
 

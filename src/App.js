@@ -7,6 +7,7 @@ import {
 
 import Landing from './Sections/Landing';
 import AboutMe from './Sections/AboutMe';
+import WhatIBuild from './Sections/WhatIBuild';
 
 const theme = responsiveFontSizes(createMuiTheme());
 
@@ -15,6 +16,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Landing />
       <AboutMe />
+      <WhatIBuild />
     </ThemeProvider>
   );
 }

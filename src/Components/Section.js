@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: theme.spacing(20),
-    paddingBottom: theme.spacing(20),
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+    position: 'relative',
     // borderTop: '2px solid black',
   },
   titleContainer: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     margin: theme.spacing(-3),
+    position: 'relative',
   },
   title: {
     paddingTop: theme.spacing(1),
@@ -30,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     color: '#ffffff',
     border: '5px solid #ffffff',
+    position: 'relative',
+    zIndex: '5',
   },
 }));
 

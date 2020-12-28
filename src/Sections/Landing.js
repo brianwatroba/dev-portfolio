@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { Grid, Typography, Container, Button } from '@material-ui/core';
 
+const makeBalls = require('../Utils/makeBalls');
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -27,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
   },
   buildThingsAndGrowThem: {
     marginTop: theme.spacing(4),
+    position: 'relative',
+    backgroundColor: 'white',
   },
   buildThingsText: {
     color: '#5CCAB0',
@@ -37,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
   },
   fbWordmark: {
+    position: 'relative',
+    backgroundColor: 'white',
     [theme.breakpoints.down('xs')]: {
       width: '100px',
     },
@@ -54,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(1),
+    position: 'relative',
+    backgroundColor: 'white',
   },
   background: {
     positive: 'relative',
@@ -63,58 +71,30 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     zIndex: '5',
   },
+  navbar: {
+    position: 'relative',
+    zIndex: '5',
+  },
 }));
 
 const Landing = () => {
   const classes = useStyles();
-  const background = useRef();
+  const backgroundRef = useRef();
 
   useLayoutEffect(() => {
-    const colors = ['#222222', '#4050b5', '#5dcbb0', '#FFEDD2', '#efce8f'];
-
-    const numBalls = 50;
-    const balls = [];
-
-    for (let i = 0; i < numBalls; i++) {
-      let ball = document.createElement('div');
-      ball.classList.add('ball');
-      ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-      ball.style.transform = `scale(${Math.random()})`;
-      ball.style.width = `${Math.random()}em`;
-      ball.style.height = ball.style.width;
-
-      balls.push(ball);
-      background.current.append(ball);
-    }
-
-    // Keyframes
-    balls.forEach((el, i, ra) => {
-      let to = {
-        x: Math.random() * (i % 2 === 0 ? -11 : 11),
-        y: Math.random() * 12,
-      };
-
-      let anim = el.animate(
-        [
-          { transform: 'translate(0, 0)' },
-          { transform: `translate(${to.x}rem, ${to.y}rem)` },
-        ],
-        {
-          duration: (Math.random() + 1) * 2000, // random duration
-          direction: 'alternate',
-          fill: 'both',
-          iterations: Infinity,
-          easing: 'ease-in-out',
-        }
-      );
+    makeBalls({
+      numBalls: 50,
+      speed: 12500,
+      distance: 6,
+      backgroundRef,
+      colors: ['#5CCAB0', '#DC3B43'],
     });
   }, []);
+
   return (
     <>
-      <Navbar id="nav" />
-      <div ref={background} className={classes.background} />
+      <Navbar className={classes.navbar} />
+      <div ref={backgroundRef} className={classes.background} />
       <Container className={classes.container}>
         <Grid container className={classes.centeredColumn}>
           <Grid item xs={12}>
@@ -170,7 +150,11 @@ const Landing = () => {
             </Typography>
           </Grid>
           <Grid item>
-            <img src={fbWordmark} className={classes.fbWordmark} />
+            <img
+              src={fbWordmark}
+              className={classes.fbWordmark}
+              alt="facebook"
+            />
           </Grid>
         </Grid>
       </Container>
