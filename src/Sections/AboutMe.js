@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 
 import Section from '../Components/Section';
@@ -13,19 +12,7 @@ import dentsuLogo from '../Images/Logos/dentsutwo.jpg';
 import gmLogo from '../Images/Logos/gmlogo.png';
 import microsoftLogo from '../Images/Logos/microsoftlogo.png';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  sectionDiv: {
-    width: '100vw',
-    height: 'auto',
-    backgroundColor: '#EAEAEA',
-  },
-}));
-
 const AboutMe = () => {
-  const classes = useStyles();
   return (
     <Section title={'about me'} backgroundColor={'#EAEAEA'}>
       <Grid
@@ -36,6 +23,7 @@ const AboutMe = () => {
         direction="row"
       >
         <Subsection
+          type="aboutMe"
           title="engineer"
           subtitle="@ freelance"
           content={[
@@ -46,10 +34,10 @@ const AboutMe = () => {
           ]}
           cardTitle="i work in"
           cardLogos={[reactLogo, nextJsLogo, nodeJsLogo, railsLogo]}
-          buttonLink
         />
 
         <Subsection
+          type="aboutMe"
           title="marketer"
           subtitle="@ Facebook"
           content={[
@@ -60,7 +48,6 @@ const AboutMe = () => {
           ]}
           cardTitle="i work with"
           cardLogos={[microsoftLogo, gmLogo, chewyLogo, dentsuLogo]}
-          buttonLink
         />
       </Grid>
     </Section>

@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#F9F9F9',
     borderRadius: '12px',
     display: 'inline-block',
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
     position: 'relative',
     border: 'solid 10px white',
   },
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '20px 20px 0px 0px',
     fontStyle: 'italic',
     position: 'relative',
+    zIndex: '2',
   },
   textBubbleBottom: {
     paddingLeft: theme.spacing(3),
@@ -59,10 +60,32 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '2',
     position: 'relative',
   },
+  textBubbleTopContact: {
+    paddingLeft: theme.spacing(2.5),
+    paddingRight: theme.spacing(3),
+    paddingTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    backgroundColor: '#F9F9F9',
+    fontWeight: '700',
+    display: 'inline-block',
+    borderRadius: '20px 20px 0px 0px',
+    position: 'relative',
+    zIndex: '0',
+  },
+  textBubbleBottomContact: {
+    marginRight: theme.spacing(2),
+    backgroundColor: '#FFFFFF',
+    display: 'inline-block',
+    borderRadius: '20px 20px 20px 20px',
+    fontWeight: '700',
+    zIndex: '2',
+    position: 'relative',
+  },
 }));
 
-const FaceCard = () => {
+const FaceCard = (props) => {
   const classes = useStyles();
+  const { type, title, subtitle } = props;
   return (
     <>
       <Paper elevation={0} className={classes.paper}>
@@ -76,21 +99,29 @@ const FaceCard = () => {
           <Grid container direction="column">
             <Grid item>
               <Typography
-                variant="h4"
+                variant={type === 'contact' ? 'h4' : 'h4'}
                 component="div"
-                className={classes.textBubbleTop}
+                className={
+                  type === 'contact'
+                    ? classes.textBubbleTopContact
+                    : classes.textBubbleTop
+                }
               >
-                hi! i'm
+                {subtitle}
               </Typography>
             </Grid>
             <Grid item>
-              <Typography
-                variant="h1"
-                component="div"
-                className={classes.textBubbleBottom}
-              >
-                brian
-              </Typography>
+              {type === 'contact' ? (
+                <div className={classes.textBubbleBottomContact}>{title}</div>
+              ) : (
+                <Typography
+                  variant="h1"
+                  component="div"
+                  className={classes.textBubbleBottom}
+                >
+                  {title}
+                </Typography>
+              )}
             </Grid>
           </Grid>
           <Grid container direction="column">

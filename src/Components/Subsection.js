@@ -4,8 +4,18 @@ import { Grid, Typography, Container, Button } from '@material-ui/core';
 import LogoCard from '../Components/LogoCard';
 
 const useStyles = makeStyles((theme) => ({
+  // gridContainer: {
+  //   marginTop: theme.spacing(3),
+  // },
   title: {
     fontWeight: '700',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  emoji: {
+    width: '30px',
+    marginLeft: theme.spacing(1),
   },
   subtitle: {
     fontStyle: 'italic',
@@ -20,11 +30,24 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(7),
   },
+  button: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(7),
+  },
 }));
 
 const Subsection = (props) => {
   const classes = useStyles();
-  const { title, subtitle, content, cardTitle, cardLogos, buttonLink } = props;
+  const {
+    type,
+    title,
+    emoji,
+    subtitle,
+    content,
+    cardTitle,
+    cardLogos,
+    buttonLink,
+  } = props;
   return (
     <>
       <Grid
@@ -35,11 +58,21 @@ const Subsection = (props) => {
         justify="center"
         direction="column"
       >
-        <Grid item>
-          <Typography variant={'h2'} className={classes.title}>
-            {title}
-          </Typography>
-        </Grid>
+        {type === 'aboutMe' && (
+          <Grid item>
+            <Typography variant={'h2'} className={classes.title}>
+              {title}
+            </Typography>
+          </Grid>
+        )}
+        {type === 'whatILike' && (
+          <Grid item>
+            <Typography variant={'h4'} className={classes.title}>
+              {title}
+              <img src={emoji} alt={emoji} className={classes.emoji}></img>
+            </Typography>
+          </Grid>
+        )}
         <Grid item>
           <Typography variant={'h5'} className={classes.subtitle}>
             {subtitle}
@@ -52,13 +85,22 @@ const Subsection = (props) => {
             </Typography>
           </Grid>
         ))}
-        <Grid item className={classes.logoCard}>
-          <LogoCard
-            cardTitle={cardTitle}
-            cardLogos={cardLogos}
-            type={'aboutMe'}
-          />
-        </Grid>
+        {cardLogos && (
+          <Grid item className={classes.logoCard}>
+            <LogoCard
+              cardTitle={cardTitle}
+              cardLogos={cardLogos}
+              type={'aboutMe'}
+            />
+          </Grid>
+        )}
+        {buttonLink && (
+          <Grid item>
+            <Button size="large" href={buttonLink} className={classes.button}>
+              check it out
+            </Button>
+          </Grid>
+        )}
       </Grid>
     </>
   );
