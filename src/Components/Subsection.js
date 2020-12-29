@@ -53,7 +53,11 @@ const Subsection = (props) => {
           </Grid>
         ))}
         <Grid item className={classes.logoCard}>
-          <LogoCard cardTitle={cardTitle} cardLogos={cardLogos} />
+          <LogoCard
+            cardTitle={cardTitle}
+            cardLogos={cardLogos}
+            type={'aboutMe'}
+          />
         </Grid>
       </Grid>
     </>
