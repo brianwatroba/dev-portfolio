@@ -10,9 +10,11 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     fontStyle: 'italic',
     marginBottom: theme.spacing(3),
+    color: '#626262',
   },
   content: {
     fontWeight: '200',
+    color: '#333333',
   },
   logoCard: {
     marginTop: theme.spacing(3),
@@ -51,7 +53,11 @@ const Subsection = (props) => {
           </Grid>
         ))}
         <Grid item className={classes.logoCard}>
-          <LogoCard cardTitle={cardTitle} cardLogos={cardLogos} />
+          <LogoCard
+            cardTitle={cardTitle}
+            cardLogos={cardLogos}
+            type={'aboutMe'}
+          />
         </Grid>
       </Grid>
     </>

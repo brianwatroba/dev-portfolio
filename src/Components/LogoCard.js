@@ -3,11 +3,20 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Typography, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
+  aboutMePaper: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
     paddingRight: theme.spacing(4),
     paddingLeft: theme.spacing(4),
+    position: 'relative',
+    zIndex: '1',
+  },
+  whatIBuildPaper: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    paddingRight: theme.spacing(3),
+    paddingLeft: theme.spacing(4),
+    marginTop: theme.spacing(-1),
     position: 'relative',
     zIndex: '1',
   },
@@ -16,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
   cardTitle: {
     display: 'flex',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(0.5),
+    paddingBottom: theme.spacing(0.5),
     paddingRight: theme.spacing(3),
     paddingLeft: theme.spacing(3),
     backgroundColor: '#FFEDD2',
     borderRadius: '50px',
-    marginBottom: theme.spacing(-2.5),
+    marginBottom: theme.spacing(-2),
     position: 'relative',
     zIndex: '2',
     fontWeight: '300',
@@ -31,18 +40,25 @@ const useStyles = makeStyles((theme) => ({
 
 const LogoCard = (props) => {
   const classes = useStyles();
-  const { cardTitle, cardLogos } = props;
+  const { cardTitle, cardLogos, elevation, type } = props;
   return (
     <Grid container alignItems="center" justify="center" direction="column">
-      <Typography
-        variant={'subtitle2'}
-        component="div"
-        className={classes.cardTitle}
-      >
-        {cardTitle}
-      </Typography>
+      {cardTitle && (
+        <Typography
+          variant={'subtitle2'}
+          component="div"
+          className={classes.cardTitle}
+        >
+          {cardTitle}
+        </Typography>
+      )}
 
-      <Paper elevation={0} className={classes.paper}>
+      <Paper
+        elevation={elevation || 0}
+        className={
+          type === 'aboutMe' ? classes.aboutMePaper : classes.whatIBuildPaper
+        }
+      >
         <Grid
           container
           alignItems="center"
