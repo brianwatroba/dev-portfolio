@@ -4,23 +4,22 @@ import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   sectionDiv: {
-    width: '100vw',
-    height: 'auto',
+    margin: 0,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    // paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(12),
     position: 'relative',
-    // borderTop: '2px solid black',
   },
   titleContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: theme.spacing(-3),
+    marginBottom: theme.spacing(6),
+    marginTop: theme.spacing(-4),
     position: 'relative',
   },
   title: {
@@ -42,17 +41,17 @@ const Section = (props) => {
   const { title, backgroundColor } = props;
   return (
     <>
-      <div className={classes.titleContainer}>
-        <Typography
-          variant={'h6'}
-          className={classes.title}
-          style={{ backgroundColor: '#626262' }}
-          component="div"
-        >
-          {title}
-        </Typography>
-      </div>
       <div className={classes.sectionDiv} style={{ backgroundColor }}>
+        <div className={classes.titleContainer}>
+          <Typography
+            variant={'h6'}
+            className={classes.title}
+            style={{ backgroundColor: '#626262' }}
+            component="div"
+          >
+            {title}
+          </Typography>
+        </div>
         {props.children}
       </div>
     </>

@@ -4,9 +4,17 @@ import FaceCard from '../Components/FaceCard';
 import fbWordmark from '../Images/fbwordmark.png';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Grid, Typography, Container, Button } from '@material-ui/core';
+import {
+  Grid,
+  Typography,
+  Container,
+  Button,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
 
 const makeBalls = require('../Utils/makeBalls');
+const removeBalls = require('../Utils/removeBalls');
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,10 +35,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     marginBottom: theme.spacing(1),
   },
-  buildThingsAndGrowThem: {
+  buildThingsAndGrowThemDiv: {
+    position: 'relative',
+    backgroundColor: 'white',
+    zIndex: '2',
+  },
+  buildThingsAndGrowThemText: {
     marginTop: theme.spacing(4),
     position: 'relative',
     backgroundColor: 'white',
+    zIndex: '2',
   },
   buildThingsText: {
     color: '#5CCAB0',
@@ -56,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
       width: '150px',
     },
   },
+  currentlyAtDiv: {
+    backgroundColor: 'white',
+    border: 'solid white 10px',
+  },
   currentlyAtText: {
     fontWeight: '400',
     marginTop: theme.spacing(3),
@@ -66,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
   background: {
     positive: 'relative',
     zIndex: '-1',
+    margin: 0,
   },
   faceCard: {
     position: 'absolute',
@@ -79,17 +98,34 @@ const useStyles = makeStyles((theme) => ({
 
 const Landing = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const backgroundRef = useRef();
 
   useLayoutEffect(() => {
-    makeBalls({
-      numBalls: 50,
-      speed: 12500,
-      distance: 6,
-      backgroundRef,
-      colors: ['#5CCAB0', '#DC3B43'],
-    });
-  }, []);
+    if (matches) {
+      removeBalls();
+      makeBalls({
+        numBalls: 50,
+        speed: 12500,
+        distance: 6,
+        backgroundRef,
+        colors: ['#5CCAB0', '#DC3B43'],
+      });
+    } else {
+      removeBalls();
+      makeBalls({
+        numBalls: 25,
+        speed: 12500,
+        distance: 6,
+        backgroundRef,
+        colors: ['#5CCAB0', '#DC3B43'],
+      });
+    }
+    return () => {
+      removeBalls();
+    };
+  });
 
   return (
     <>
@@ -98,12 +134,22 @@ const Landing = () => {
       <Container className={classes.container}>
         <Grid container className={classes.centeredColumn}>
           <Grid item xs={12}>
-            <FaceCard className={classes.faceCard} />
+            <FaceCard
+              title="brian"
+              subtitle="hi! I'm"
+              className={classes.faceCard}
+            />
           </Grid>
-          <Grid container xs={12} className={classes.centeredRow}>
+          <Grid
+            container
+            xs={8}
+            md={6}
+            lg={4}
+            className={`${classes.centeredRow} ${classes.buildThingsAndGrowThemDiv}`}
+          >
             <Grid
               container
-              className={`${classes.centeredRow} ${classes.buildThingsAndGrowThem}`}
+              className={`${classes.centeredRow} ${classes.buildThingsAndGrowThemText}`}
               spacing={2}
             >
               <Grid item>
@@ -144,7 +190,7 @@ const Landing = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item xs={8} md={6} lg={4} className={classes.currentlyAtDiv}>
             <Typography variant={'h6'} className={classes.currentlyAtText}>
               currently at:
             </Typography>

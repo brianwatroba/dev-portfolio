@@ -2,12 +2,13 @@ import React from 'react';
 import {
   AppBar,
   Toolbar,
-  // useMediaQuery,
+  useMediaQuery,
   useTheme,
   IconButton,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/MenuRounded';
+import NavTabs from './NavTabs';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,23 +35,24 @@ const useStyles = makeStyles((theme) => ({
     positive: 'relative',
     zIndex: '2',
   },
+  toolBarMobile: {
+    display: 'flex',
+    justifyContent: 'center',
+    positive: 'relative',
+    zIndex: '2',
+  },
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
   const classes = useStyles();
-  // const theme = useTheme();
-  // const matches = useMediaQuery(theme.breakpoints.down('xs'));
+  const { reference } = props;
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
-        <Toolbar className={classes.toolBar} disableGutters>
-          <IconButton
-            edge="end"
-            className={classes.menuButton}
-            aria-label="menu"
-          >
-            <MenuIcon fontSize="large" />
-          </IconButton>
+        <Toolbar className={matches ? classes.toolBarMobile : classes.toolBar}>
+          <NavTabs reference={reference} />
         </Toolbar>
       </AppBar>
     </div>

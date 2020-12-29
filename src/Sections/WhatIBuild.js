@@ -22,14 +22,6 @@ import mongoDbLogo from '../Images/Logos/mongodblogo.png';
 import herokuLogo from '../Images/Logos/herokulogofour.png';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  sectionDiv: {
-    width: '100vw',
-    height: 'auto',
-    backgroundColor: '#EAEAEA',
-  },
   bringUsCloserText: {
     color: '#989898',
   },
@@ -38,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: '220px',
     height: '25px',
     borderBottom: '1px solid black',
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -78,13 +70,7 @@ const WhatIBuild = () => {
 
   return (
     <Section title={'what i build'} backgroundColor={'#FFFFFF'}>
-      <Grid
-        container
-        xs={12}
-        alignItems="center"
-        justify="center"
-        direction="column"
-      >
+      <Grid container alignItems="center" justify="center" direction="column">
         <Grid item>
           <Typography variant={'h5'} className={classes.bringUsCloserText}>
             apps that bring us closer to:
@@ -100,11 +86,11 @@ const WhatIBuild = () => {
         </Grid>
 
         <Grid
-          // lg={12}
           container
-          alignItems="center"
-          justify="center"
+          alignContent="center"
           direction="row"
+          xs={12}
+          xl={8}
           className={classes.appExampleDiv}
         >
           <AppExample
