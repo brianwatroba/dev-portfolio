@@ -126,7 +126,7 @@ const FaceCard = (props) => {
           </Grid>
           <Grid container direction="column">
             <Grid item>
-              <img src={Avatar} className={classes.avatar} />
+              <img src={Avatar} className={classes.avatar} alt="avatar" />
             </Grid>
           </Grid>
         </Grid>
