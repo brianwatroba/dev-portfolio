@@ -112,16 +112,16 @@ const Landing = () => {
         backgroundRef,
         colors: ['#5CCAB0', '#DC3B43'],
       });
-    } else {
-      removeBalls();
-      makeBalls({
-        numBalls: 25,
-        speed: 12500,
-        distance: 6,
-        backgroundRef,
-        colors: ['#5CCAB0', '#DC3B43'],
-      });
-    }
+    // } else {
+    //   removeBalls();
+    //   makeBalls({
+    //     numBalls: 25,
+    //     speed: 12500,
+    //     distance: 6,
+    //     backgroundRef,
+    //     colors: ['#5CCAB0', '#DC3B43'],
+    //   });
+    // }
     return () => {
       removeBalls();
     };
