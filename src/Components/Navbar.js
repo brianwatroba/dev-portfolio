@@ -1,7 +1,9 @@
 import React from 'react';
-import { AppBar, Toolbar, useMediaQuery, useTheme } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import NavTabs from './NavTabs';
+import { Grid } from '@material-ui/core';
+
+import NavLink from './NavLink';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,18 +36,37 @@ const useStyles = makeStyles((theme) => ({
     positive: 'relative',
     zIndex: '2',
   },
+  tab: {
+    textTransform: 'none',
+    fontWeight: '400',
+    fontSize: '1rem',
+    minWidth: 9,
+    color: '#989898',
+    '&:hover': {
+      color: '#333333',
+    },
+  },
 }));
 
 const Navbar = (props) => {
   const classes = useStyles();
-  const { reference } = props;
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('xs'));
+
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
-        <Toolbar className={matches ? classes.toolBarMobile : classes.toolBar}>
-          <NavTabs reference={reference} />
+        <Toolbar className={classes.toolBar}>
+          <Grid
+            container
+            justify="center"
+            alignItems="center"
+            direction="row"
+            spacing={2}
+          >
+            <NavLink title="about me" to="aboutMe" />
+            <NavLink title="what i build" to="whatIBuild" />
+            <NavLink title="what i like" to="whatILike" />
+            <NavLink title="contact" to="contact" />
+          </Grid>
         </Toolbar>
       </AppBar>
     </div>

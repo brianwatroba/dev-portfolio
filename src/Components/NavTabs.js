@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Tabs, Tab } from '@material-ui/core';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   tab: {
@@ -15,42 +16,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NavTabs = (props) => {
+const NavTabs = () => {
   const classes = useStyles();
-  const { reference } = props;
   const handleChange = () => {
     console.log('hi');
   };
 
   return (
     <>
+      <Link
+        // activeClass="active"
+        to="aboutMe"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        move
+      </Link>
       <Tabs indicatorColor="none">
-        <Tab
-          label="about me"
-          disableRipple
-          className={classes.tab}
-          onClick={() => {
-            console.log(reference);
-          }}
-        ></Tab>
-        <Tab
-          label="what i build"
-          disableRipple
-          className={classes.tab}
-          onClick={handleChange}
-        ></Tab>
-        <Tab
-          label="what i like"
-          disableRipple
-          className={classes.tab}
-          onClick={handleChange}
-        ></Tab>
-        <Tab
-          label="contact"
-          disableRipple
-          className={classes.tab}
-          onClick={handleChange}
-        ></Tab>
+        <Tab label="about me" disableRipple className={classes.tab}></Tab>
+        <Tab label="what i build" disableRipple className={classes.tab}></Tab>
+        <Tab label="what i like" disableRipple className={classes.tab}></Tab>
+        <Tab label="contact" disableRipple className={classes.tab}></Tab>
       </Tabs>
     </>
   );

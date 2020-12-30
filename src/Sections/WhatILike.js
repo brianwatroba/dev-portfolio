@@ -11,7 +11,7 @@ import keyboardEmoji from '../Images/keyboardemoji.png';
 const AppExample = () => {
   return (
     <>
-      <Section title={'what i like'} backgroundColor={'#EAEAEA'}>
+      <Section title={'what i like'} backgroundColor={'#EAEAEA'} id="whatILike">
         <Grid
           container
           xs={12}
@@ -31,7 +31,7 @@ const AppExample = () => {
               '3100 SR competitive',
               `4th place '19, 3rd place '20 `,
             ]}
-            buttonLink="https://www.overwatch.com"
+            buttonLink="https://cea.gg/"
           />
           <Subsection
             type="whatILike"
@@ -44,7 +44,7 @@ const AppExample = () => {
               'arrangement, mastering',
               'soundcloud',
             ]}
-            buttonLink="https://www.ableton.com"
+            buttonLink="https://soundcloud.com/brianwatroba"
           />
           <Subsection
             type="whatILike"
@@ -57,7 +57,7 @@ const AppExample = () => {
               'Middlebury Language School',
               '3+ years abroad: China, Spain',
             ]}
-            buttonLink="https://www.ableton.com"
+            buttonLink="https://www.linkedin.com/in/brian-watroba-649a93b0/"
           />
         </Grid>
       </Section>

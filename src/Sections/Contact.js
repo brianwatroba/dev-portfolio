@@ -13,7 +13,7 @@ import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    fontWeight: '400',
+    fontWeight: '300',
     marginBottom: theme.spacing(3),
   },
   socialsTitle: {
@@ -59,12 +59,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AppExample = () => {
+const Contact = () => {
   const classes = useStyles();
 
   return (
     <>
-      <Section title={'contact'} backgroundColor={'#FFFFFF'}>
+      <Section title={'contact'} backgroundColor={'#FFFFFF'} id="contact">
         <Grid
           container
           xs={12}
@@ -80,7 +80,7 @@ const AppExample = () => {
         <Grid item>
           <FaceCard
             type="contact"
-            subtitle={"let's talk."}
+            subtitle={"let's chat."}
             title={
               <Button
                 variant="contained"
@@ -96,7 +96,7 @@ const AppExample = () => {
         </Grid>
         <Grid item>
           <Typography
-            variant="h5"
+            variant="h6"
             component="div"
             className={classes.socialsTitle}
           >
@@ -135,4 +135,4 @@ const AppExample = () => {
   );
 };
 
-export default AppExample;
+export default Contact;
