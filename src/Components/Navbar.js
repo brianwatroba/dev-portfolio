@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  useMediaQuery,
-  useTheme,
-  IconButton,
-} from '@material-ui/core';
+import { AppBar, Toolbar, useMediaQuery, useTheme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/MenuRounded';
 import NavTabs from './NavTabs';
 
 const useStyles = makeStyles((theme) => ({

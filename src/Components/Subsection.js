@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Container, Button } from '@material-ui/core';
+import { Grid, Typography, Button } from '@material-ui/core';
 import LogoCard from '../Components/LogoCard';
 
 const useStyles = makeStyles((theme) => ({

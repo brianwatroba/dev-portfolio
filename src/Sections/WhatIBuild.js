@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Container } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import Typed from 'typed.js';
 
 import Section from '../Components/Section';

@@ -25,7 +25,7 @@ const makeBalls = ({ numBalls, speed, distance, backgroundRef, colors }) => {
       y: Math.random() * distance,
     };
 
-    let anim = el.animate(
+    el.animate(
       [
         { transform: 'translate(0, 0)' },
         { transform: `translate(${to.x}rem, ${to.y}rem)` },
