@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, useMediaQuery, useTheme } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 
@@ -50,13 +50,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = (props) => {
   const classes = useStyles();
-  const { refs } = props;
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('xs'));
-
-  const handleClick = () => {
-    console.log(refs);
-  };
 
   return (
     <div className={classes.root}>
@@ -73,12 +66,6 @@ const Navbar = (props) => {
             <NavLink title="what i build" to="whatIBuild" />
             <NavLink title="what i like" to="whatILike" />
             <NavLink title="contact" to="contact" />
-            {/* <Tabs indicatorColor="none"> 
-            <Tab label="about me" disableRipple className={classes.tab}></Tab>
-            <Tab label="what i build" disableRipple className={classes.tab} />
-            <Tab label="what i like" disableRipple className={classes.tab} />
-            <Tab label="contact" disableRipple className={classes.tab} />
-          </Tabs> */}
           </Grid>
         </Toolbar>
       </AppBar>
