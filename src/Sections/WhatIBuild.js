@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     width: '220px',
     height: '25px',
-    borderBottom: '1px solid black',
+    borderBottom: '1px solid #989898',
     padding: theme.spacing(1),
     display: 'flex',
     alignItems: 'center',

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import FaceCard from '../Components/FaceCard';
 import fbWordmark from '../Images/fbwordmark.png';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,6 +10,8 @@ import {
   Button,
   useMediaQuery,
   useTheme,
+  ClickAwayListener,
+  Tooltip,
 } from '@material-ui/core';
 
 const makeBalls = require('../Utils/makeBalls');
@@ -89,6 +91,9 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     position: 'relative',
     zIndex: '5',
+  },
+  tooltip: {
+    fontSize: '48px',
   },
 }));
 

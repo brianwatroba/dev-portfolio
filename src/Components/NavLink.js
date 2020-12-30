@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
 const NavLink = (props) => {
   const { title, to } = props;
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <>
@@ -31,7 +33,9 @@ const NavLink = (props) => {
           duration={500}
           className={classes.link}
         >
-          <Typography variant={'caption'}>{title}</Typography>
+          <Typography variant={matches ? 'subtitle1' : ' caption'}>
+            {title}
+          </Typography>
         </Link>
       </Grid>
     </>

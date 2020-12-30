@@ -9,8 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    // paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(12),
+    paddingBottom: theme.spacing(8),
     position: 'relative',
   },
   titleContainer: {
