@@ -1,7 +1,13 @@
 //'#5CCAB0', '#4050B5', '#FFEDD2', '#DC3B43'
 
-const makeBalls = ({ numBalls, speed, distance, backgroundRef, colors }) => {
-  //   const numBalls = 50;
+const makeBalls = ({
+  numBalls,
+  speed,
+  distance,
+  backgroundRef,
+  colors,
+  shouldAnimate,
+}) => {
   const balls = [];
 
   for (let i = 0; i < numBalls; i++) {
@@ -19,26 +25,28 @@ const makeBalls = ({ numBalls, speed, distance, backgroundRef, colors }) => {
   }
 
   // Keyframes
-  balls.forEach((el, i, ra) => {
-    let to = {
-      x: Math.random() * (i % 2 === 0 ? distance * -1 : distance),
-      y: Math.random() * distance,
-    };
+  if (shouldAnimate) {
+    balls.forEach((el, i, ra) => {
+      let to = {
+        x: Math.random() * (i % 2 === 0 ? distance * -1 : distance),
+        y: Math.random() * distance,
+      };
 
-    el.animate(
-      [
-        { transform: 'translate(0, 0)' },
-        { transform: `translate(${to.x}rem, ${to.y}rem)` },
-      ],
-      {
-        duration: (Math.random() + 1) * speed, // random duration
-        direction: 'alternate',
-        fill: 'both',
-        iterations: Infinity,
-        easing: 'ease-in-out',
-      }
-    );
-  });
+      el.animate(
+        [
+          { transform: 'translate(0, 0)' },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` },
+        ],
+        {
+          duration: (Math.random() + 1) * speed, // random duration
+          direction: 'alternate',
+          fill: 'both',
+          iterations: Infinity,
+          easing: 'ease-in-out',
+        }
+      );
+    });
+  }
 };
 
 module.exports = makeBalls;

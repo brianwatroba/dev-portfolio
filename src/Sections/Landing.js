@@ -63,9 +63,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: '125px',
     },
-    // [theme.breakpoints.up('md')]: {
-    //   width: '125px',
-    // },
     [theme.breakpoints.up('lg')]: {
       width: '150px',
     },
@@ -77,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   currentlyAtText: {
     fontWeight: '400',
     marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(1),
+
     position: 'relative',
     backgroundColor: 'white',
   },
@@ -99,8 +96,9 @@ const useStyles = makeStyles((theme) => ({
 const Landing = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const matches = true;
   const backgroundRef = useRef();
+  useMediaQuery(theme.breakpoints.up('sm'));
 
   useLayoutEffect(() => {
     if (matches) {
@@ -110,18 +108,10 @@ const Landing = () => {
         speed: 12500,
         distance: 6,
         backgroundRef,
+        shouldAnimate: true,
         colors: ['#5CCAB0', '#DC3B43'],
       });
-    // } else {
-    //   removeBalls();
-    //   makeBalls({
-    //     numBalls: 25,
-    //     speed: 12500,
-    //     distance: 6,
-    //     backgroundRef,
-    //     colors: ['#5CCAB0', '#DC3B43'],
-    //   });
-    // }
+    }
     return () => {
       removeBalls();
     };
@@ -129,7 +119,6 @@ const Landing = () => {
 
   return (
     <>
-      <Navbar className={classes.navbar} />
       <div ref={backgroundRef} className={classes.background} />
       <Container className={classes.container}>
         <Grid container className={classes.centeredColumn}>

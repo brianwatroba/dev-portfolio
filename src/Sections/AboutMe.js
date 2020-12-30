@@ -14,7 +14,7 @@ import microsoftLogo from '../Images/Logos/microsoftlogo.png';
 
 const AboutMe = () => {
   return (
-    <Section title={'about me'} backgroundColor={'#EAEAEA'}>
+    <Section title={'about me'} backgroundColor={'#EAEAEA'} id="aboutMe">
       <Grid
         container
         xs={12}

@@ -11,7 +11,7 @@ import keyboardEmoji from '../Images/keyboardemoji.png';
 const AppExample = () => {
   return (
     <>
-      <Section title={'what i like'} backgroundColor={'#EAEAEA'}>
+      <Section title={'what i like'} backgroundColor={'#EAEAEA'} id="whatILike">
         <Grid
           container
           xs={12}

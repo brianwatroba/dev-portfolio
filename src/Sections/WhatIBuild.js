@@ -69,7 +69,7 @@ const WhatIBuild = () => {
   }, []);
 
   return (
-    <Section title={'what i build'} backgroundColor={'#FFFFFF'}>
+    <Section title={'what i build'} backgroundColor={'#FFFFFF'} id="whatIBuild">
       <Grid container alignItems="center" justify="center" direction="column">
         <Grid item>
           <Typography variant={'h5'} className={classes.bringUsCloserText}>

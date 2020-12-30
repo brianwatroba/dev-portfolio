@@ -38,11 +38,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Section = (props) => {
   const classes = useStyles();
-  const { title, backgroundColor } = props;
+  const { title, backgroundColor, id } = props;
   return (
     <>
       <div className={classes.sectionDiv} style={{ backgroundColor }}>
-        <div className={classes.titleContainer}>
+        <div className={classes.titleContainer} id={id}>
           <Typography
             variant={'h6'}
             className={classes.title}
