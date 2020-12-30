@@ -4,9 +4,6 @@ import { Grid, Typography, Button } from '@material-ui/core';
 import LogoCard from '../Components/LogoCard';
 
 const useStyles = makeStyles((theme) => ({
-  // gridContainer: {
-  //   marginTop: theme.spacing(3),
-  // },
   title: {
     fontWeight: '700',
     display: 'flex',

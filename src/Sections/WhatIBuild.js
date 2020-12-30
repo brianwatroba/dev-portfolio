@@ -96,7 +96,9 @@ const WhatIBuild = () => {
           <AppExample
             title={'spyfall'}
             subtitleOne={"'whodunnit' digital board game"}
-            subtitleTwo={''}
+            subtitleTwo={`"a great party game" - `}
+            subtitleTwoLinkText={'Tech Radar'}
+            subtitleTwoLinkHref="https://www.techradar.com/how-to/how-to-play-spyfall-online"
             stats={'150K MAU | 2M page views'}
             buttonLink={'https://www.spyfall.app'}
             phoneImage={spyfallPhone}

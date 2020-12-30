@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Button } from '@material-ui/core';
 
 import LogoCard from './LogoCard';
+import { PlayCircleFilledWhite } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -19,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     color: '#737373',
     fontStyle: 'italic',
+  },
+  blankText: {
+    color: 'white',
   },
   stats: {
     fontWeight: '300',
@@ -40,6 +44,8 @@ const AppExample = (props) => {
     title,
     subtitleOne,
     subtitleTwo,
+    subtitleTwoLinkText,
+    subtitleTwoLinkHref,
     stats,
     buttonLink,
     phoneImage,
@@ -69,8 +75,13 @@ const AppExample = (props) => {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant="h5" className={classes.subtitleTwo}>
+          <Typography variant="h6" className={classes.subtitleTwo}>
             {subtitleTwo}
+            {subtitleTwoLinkText ? (
+              <a href={subtitleTwoLinkHref}>{subtitleTwoLinkText}</a>
+            ) : (
+              <div className={classes.blankText}>blank</div>
+            )}
           </Typography>
         </Grid>
         <Grid item>

@@ -1,5 +1,4 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import Navbar from '../Components/Navbar';
 import FaceCard from '../Components/FaceCard';
 import fbWordmark from '../Images/fbwordmark.png';
 import { makeStyles } from '@material-ui/core/styles';
@@ -96,9 +95,8 @@ const useStyles = makeStyles((theme) => ({
 const Landing = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = true;
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const backgroundRef = useRef();
-  useMediaQuery(theme.breakpoints.up('sm'));
 
   useLayoutEffect(() => {
     if (matches) {
