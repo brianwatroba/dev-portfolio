@@ -113,7 +113,8 @@ const WhatIBuild = () => {
           <AppExample
             title={'texts from yourself'}
             subtitleOne={'sms-based journaling app'}
-            subtitleTwo={' '}
+            subtitleTwo={`"easy self care, love it!" - `}
+            subtitleTwoLinkText={'user'}
             stats={'300 MAU | 1K page views'}
             buttonLink={'https://www.textsfromyourself.app'}
             phoneImage={tfyPhone}
@@ -128,7 +129,8 @@ const WhatIBuild = () => {
           <AppExample
             title={'love quotes only'}
             subtitleOne={'largest online love quotes library'}
-            subtitleTwo={' '}
+            subtitleTwo={`"where I find my IG captions" - `}
+            subtitleTwoLinkText={'user'}
             stats={'1K MAU | 5K page views'}
             buttonLink={'https://www.lovequotesonly.com'}
             phoneImage={loveQuotesPhone}

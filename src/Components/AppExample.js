@@ -77,10 +77,8 @@ const AppExample = (props) => {
         <Grid item>
           <Typography variant="h6" className={classes.subtitleTwo}>
             {subtitleTwo}
-            {subtitleTwoLinkText ? (
+            {subtitleTwoLinkText && (
               <a href={subtitleTwoLinkHref}>{subtitleTwoLinkText}</a>
-            ) : (
-              <div className={classes.blankText}>blank</div>
             )}
           </Typography>
         </Grid>
