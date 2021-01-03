@@ -38,6 +38,15 @@ const useStyles = makeStyles((theme) => ({
   appExampleDiv: {
     marginTop: theme.spacing(8),
   },
+  mauNumber: {
+    textAlign: 'center',
+    color: 'black',
+  },
+  mauText: {
+    textAlign: 'center',
+    marginTop: theme.spacing(8),
+    color: '#989898',
+  },
 }));
 
 const WhatIBuild = () => {
@@ -85,6 +94,14 @@ const WhatIBuild = () => {
           ></Typography>
         </Grid>
 
+        <Grid item className={classes.mauText}>
+          <Typography variant={'h3'} className={classes.mauNumber}>
+            150K
+          </Typography>
+          <Typography variant={'h5'}>monthly active users</Typography>
+          <Typography variant={'h7'}>across all apps</Typography>
+        </Grid>
+
         <Grid
           container
           alignContent="center"
@@ -99,7 +116,7 @@ const WhatIBuild = () => {
             subtitleTwo={`"a great party game" - `}
             subtitleTwoLinkText={'Tech Radar'}
             subtitleTwoLinkHref="https://www.techradar.com/how-to/how-to-play-spyfall-online"
-            stats={'150K MAU | 2M page views'}
+            // stats={'150K MAU | 2M page views'}
             buttonLink={'https://www.spyfall.app'}
             phoneImage={spyfallPhone}
             logos={[
@@ -115,7 +132,7 @@ const WhatIBuild = () => {
             subtitleOne={'sms-based journaling app'}
             subtitleTwo={`"easy self care, love it!" - `}
             subtitleTwoLinkText={'user'}
-            stats={'300 MAU | 1K page views'}
+            // stats={'300 MAU | 1K page views'}
             buttonLink={'https://www.textsfromyourself.app'}
             phoneImage={tfyPhone}
             logos={[
@@ -131,7 +148,7 @@ const WhatIBuild = () => {
             subtitleOne={'largest online love quotes library'}
             subtitleTwo={`"where I find my IG captions" - `}
             subtitleTwoLinkText={'user'}
-            stats={'1K MAU | 5K page views'}
+            // stats={'1K MAU | 5K page views'}
             buttonLink={'https://www.lovequotesonly.com'}
             phoneImage={loveQuotesPhone}
             logos={[
