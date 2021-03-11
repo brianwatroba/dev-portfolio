@@ -13,45 +13,45 @@ import gmLogo from '../Images/Logos/gmlogo.png';
 import microsoftLogo from '../Images/Logos/microsoftlogo.png';
 
 const AboutMe = () => {
-  return (
-    <Section title={'about me'} backgroundColor={'#EAEAEA'} id="aboutMe">
-      <Grid
-        container
-        xs={12}
-        alignItems="center"
-        justify="center"
-        direction="row"
-      >
-        <Subsection
-          type="aboutMe"
-          title="engineer"
-          subtitle="@ freelance"
-          content={[
-            'full stack',
-            'web + native',
-            'JavaScript, Python, Ruby',
-            'consumer, games',
-          ]}
-          cardTitle="i work in"
-          cardLogos={[reactLogo, nextJsLogo, nodeJsLogo, railsLogo]}
-        />
+    return (
+        <Section title={'about me'} backgroundColor={'#F3F3F3'} id="aboutMe">
+            <Grid
+                container
+                xs={12}
+                alignItems="center"
+                justify="center"
+                direction="row"
+            >
+                <Subsection
+                    type="aboutMe"
+                    title="engineer"
+                    subtitle="@ freelance"
+                    content={[
+                        'full stack',
+                        'web + native',
+                        'JavaScript, Python, Ruby',
+                        'consumer, games',
+                    ]}
+                    cardTitle="i work in"
+                    cardLogos={[reactLogo, nextJsLogo, nodeJsLogo, railsLogo]}
+                />
 
-        <Subsection
-          type="aboutMe"
-          title="marketer"
-          subtitle="@ Facebook"
-          content={[
-            'brand partnerships',
-            '$50M+ in yearly revenue',
-            'ad conception + launch',
-            'digital native, eComm',
-          ]}
-          cardTitle="i work with"
-          cardLogos={[microsoftLogo, gmLogo, chewyLogo, dentsuLogo]}
-        />
-      </Grid>
-    </Section>
-  );
+                <Subsection
+                    type="aboutMe"
+                    title="marketer"
+                    subtitle="@ Facebook"
+                    content={[
+                        'brand partnerships',
+                        '$50M+ in yearly revenue',
+                        'ad conception + launch',
+                        'digital native, eComm',
+                    ]}
+                    cardTitle="i work with"
+                    cardLogos={[microsoftLogo, gmLogo, chewyLogo, dentsuLogo]}
+                />
+            </Grid>
+        </Section>
+    );
 };
 
 export default AboutMe;
