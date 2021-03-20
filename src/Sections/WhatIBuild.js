@@ -9,6 +9,8 @@ import spyfallPhone from "../Images/spyfallphone.png";
 import loveQuotesPhone from "../Images/lovequotesphone.png";
 import tfyPhone from "../Images/tfyphone.png";
 
+import videoGamesEmoji from "../Images/videogamesemoji.png";
+
 import nodeJsLogo from "../Images/Logos/nodejslogo.png";
 import railsLogo from "../Images/Logos/railslogo.png";
 import reactLogo from "../Images/Logos/reactlogo.jpg";
@@ -36,6 +38,24 @@ const useStyles = makeStyles((theme) => ({
         color: "#989898",
         fontFamily: "open sans",
     },
+    ownershipTitle: {
+        paddingTop: theme.spacing(2),
+        paddingBottom: theme.spacing(2),
+        paddingRight: theme.spacing(5),
+        paddingLeft: theme.spacing(5),
+        borderRadius: "4px",
+        backgroundColor: "#FFEDD2",
+        display: "flex",
+        color: "#B0B0B0",
+        alignItems: "center",
+        justfiyContent: "center",
+
+        fontFamily: "open sans",
+    },
+    emoji: {
+        width: "30px",
+        marginRight: theme.spacing(1),
+    },
 }));
 
 const WhatIBuild = () => {
@@ -53,6 +73,22 @@ const WhatIBuild = () => {
                 justify="center"
                 direction="column"
             >
+                <Grid item>
+                    <div>
+                        <Typography
+                            component="div"
+                            variant="h5"
+                            className={classes.ownershipTitle}
+                        >
+                            <img
+                                src={videoGamesEmoji}
+                                alt={"emoji"}
+                                className={classes.emoji}
+                            />
+                            my stuff
+                        </Typography>
+                    </div>
+                </Grid>
                 <Grid item className={classes.mauText}>
                     <Typography variant={"h2"} className={classes.mauNumber}>
                         150K
