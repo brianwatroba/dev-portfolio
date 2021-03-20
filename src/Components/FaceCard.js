@@ -90,9 +90,9 @@ const FaceCard = (props) => {
     return (
         <>
             <ScrollAnimation
-                animateIn="fadeIn"
-                delay={500}
-                duration={1}
+                animateIn={type === "contact" ? "fadeIn" : "fadeInDown"}
+                delay={type === "contact" ? 0 : 500}
+                duration={type === "contact" ? 0 : 0.5}
                 animateOnce
             >
                 <Paper elevation={0} className={classes.paper}>

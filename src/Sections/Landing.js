@@ -145,8 +145,8 @@ const Landing = () => {
                         >
                             <Grid item>
                                 <ScrollAnimation
-                                    animateIn="bounceIn"
-                                    delay={1500}
+                                    animateIn="fadeIn"
+                                    delay={1250}
                                     animateOnce
                                 >
                                     <Typography variant={"h4"}>i</Typography>
@@ -154,7 +154,7 @@ const Landing = () => {
                             </Grid>
                             <ScrollAnimation
                                 animateIn="bounceIn"
-                                delay={1750}
+                                delay={1400}
                                 animateOnce
                             >
                                 <Grid item>
@@ -189,8 +189,8 @@ const Landing = () => {
                         >
                             <Grid item>
                                 <ScrollAnimation
-                                    animateIn="bounceIn"
-                                    delay={2500}
+                                    animateIn="fadeIn"
+                                    delay={2000}
                                     animateOnce
                                 >
                                     <Typography variant={"h4"}>and</Typography>
@@ -199,7 +199,7 @@ const Landing = () => {
                             <Grid item>
                                 <ScrollAnimation
                                     animateIn="bounceIn"
-                                    delay={2750}
+                                    delay={2150}
                                     animateOnce
                                 >
                                     <Button
@@ -223,7 +223,7 @@ const Landing = () => {
                     >
                         <ScrollAnimation
                             animateIn="fadeIn"
-                            delay={3250}
+                            delay={3000}
                             duration={2}
                             animateOnce
                             style={{
@@ -243,7 +243,7 @@ const Landing = () => {
                     <Grid item>
                         <ScrollAnimation
                             animateIn="fadeIn"
-                            delay={3250}
+                            delay={3005}
                             duration={2}
                             animateOnce
                             style={{
