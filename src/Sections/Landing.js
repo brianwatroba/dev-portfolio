@@ -225,12 +225,12 @@ const Landing = () => {
                             animateIn="fadeIn"
                             delay={3250}
                             duration={2}
+                            animateOnce
                             style={{
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
                             }}
-                            animateOnce
                         >
                             <Typography
                                 variant={"h6"}
@@ -245,12 +245,12 @@ const Landing = () => {
                             animateIn="fadeIn"
                             delay={3250}
                             duration={2}
+                            animateOnce
                             style={{
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
                             }}
-                            animateOnce
                         >
                             <img
                                 src={fbWordmark}
