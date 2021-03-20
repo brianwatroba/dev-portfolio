@@ -1,7 +1,6 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
-import Typed from "typed.js";
 
 import Section from "../Components/Section";
 import AppExample from "../Components/AppExample";
@@ -22,19 +21,6 @@ import mongoDbLogo from "../Images/Logos/mongodblogo.png";
 import herokuLogo from "../Images/Logos/herokulogofour.png";
 
 const useStyles = makeStyles((theme) => ({
-    bringUsCloserText: {
-        color: "#989898",
-    },
-    typingDiv: {
-        marginTop: theme.spacing(2),
-        width: "220px",
-        height: "25px",
-        borderBottom: "1px solid #989898",
-        padding: theme.spacing(1),
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-    },
     appExampleDiv: {
         marginTop: theme.spacing(6),
     },
@@ -54,31 +40,6 @@ const useStyles = makeStyles((theme) => ({
 
 const WhatIBuild = () => {
     const classes = useStyles();
-    const typingRef = useRef();
-
-    // useLayoutEffect(() => {
-    //   var words = {
-    //     strings: [
-    //       'ourselves',
-    //       'each other',
-    //       'our ideas',
-    //       'our feelings',
-    //       'our ambitions',
-    //     ],
-    //     startDelay: 30,
-    //     backDelay: 1000,
-    //     typeSpeed: 100,
-    //     backSpeed: 35,
-    //     shuffle: true,
-    //     showCursor: false,
-    //     loop: true,
-    //     smartBackspace: false,
-    //   };
-    //   const typed = new Typed(typingRef.current, words);
-    //   return () => {
-    //     typed.stop();
-    //   };
-    // }, []);
 
     return (
         <Section
@@ -92,20 +53,6 @@ const WhatIBuild = () => {
                 justify="center"
                 direction="column"
             >
-                {/* <Grid item>
-          <Typography variant={'h5'} className={classes.bringUsCloserText}>
-            apps that bring us closer to:
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography
-            component={'div'}
-            ref={typingRef}
-            variant="h4"
-            className={classes.typingDiv}
-          ></Typography>
-        </Grid> */}
-
                 <Grid item className={classes.mauText}>
                     <Typography variant={"h2"} className={classes.mauNumber}>
                         150K
