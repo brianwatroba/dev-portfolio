@@ -7,10 +7,12 @@ import nextJsLogo from "../Images/Logos/nextjslogo.png";
 import nodeJsLogo from "../Images/Logos/nodejslogo.png";
 import railsLogo from "../Images/Logos/railslogo.png";
 import reactLogo from "../Images/Logos/reactlogo.jpg";
+import reactNativeLogo from "../Images/Logos/reactNativeLogo.png";
 import chewyLogo from "../Images/Logos/chewylogo.png";
 import dentsuLogo from "../Images/Logos/dentsutwo.jpg";
 import gmLogo from "../Images/Logos/gmlogo.png";
 import microsoftLogo from "../Images/Logos/microsoftlogo.png";
+// import ScrollAnimation from "react-animate-on-scroll";
 
 const AboutMe = () => {
     return (
@@ -29,13 +31,17 @@ const AboutMe = () => {
                     content={[
                         "full stack",
                         "web + native",
-                        "JavaScript, Python, Ruby",
+                        "TS/JS, Ruby, Python",
                         "consumer, games",
                     ]}
                     cardTitle="i work in"
-                    cardLogos={[reactLogo, nextJsLogo, nodeJsLogo, railsLogo]}
+                    cardLogos={[
+                        nextJsLogo,
+                        reactNativeLogo,
+                        nodeJsLogo,
+                        railsLogo,
+                    ]}
                 />
-
                 <Subsection
                     type="aboutMe"
                     title="marketer"

@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import FaceCard from "../Components/FaceCard";
 import fbWordmark from "../Images/fbwordmark.png";
 import { makeStyles } from "@material-ui/core/styles";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import {
     Grid,
@@ -143,31 +144,43 @@ const Landing = () => {
                             spacing={2}
                         >
                             <Grid item>
-                                <Typography variant={"h4"}>i</Typography>
+                                <ScrollAnimation
+                                    animateIn="bounceIn"
+                                    delay={1500}
+                                    animateOnce
+                                >
+                                    <Typography variant={"h4"}>i</Typography>
+                                </ScrollAnimation>
                             </Grid>
-                            <Grid item>
-                                <Typography
-                                    variant={"h4"}
-                                    display={"inline"}
-                                    className={classes.carrotText}
-                                >
-                                    {"<"}
-                                </Typography>
-                                <Typography
-                                    variant={"h4"}
-                                    display={"inline"}
-                                    className={classes.buildThingsText}
-                                >
-                                    BuildThings /
-                                </Typography>
-                                <Typography
-                                    variant={"h4"}
-                                    display={"inline"}
-                                    className={classes.carrotText}
-                                >
-                                    {">"}
-                                </Typography>
-                            </Grid>
+                            <ScrollAnimation
+                                animateIn="bounceIn"
+                                delay={1750}
+                                animateOnce
+                            >
+                                <Grid item>
+                                    <Typography
+                                        variant={"h4"}
+                                        display={"inline"}
+                                        className={classes.carrotText}
+                                    >
+                                        {"<"}
+                                    </Typography>
+                                    <Typography
+                                        variant={"h4"}
+                                        display={"inline"}
+                                        className={classes.buildThingsText}
+                                    >
+                                        BuildThings /
+                                    </Typography>
+                                    <Typography
+                                        variant={"h4"}
+                                        display={"inline"}
+                                        className={classes.carrotText}
+                                    >
+                                        {">"}
+                                    </Typography>
+                                </Grid>
+                            </ScrollAnimation>
                         </Grid>
                         <Grid
                             container
@@ -175,19 +188,32 @@ const Landing = () => {
                             spacing={2}
                         >
                             <Grid item>
-                                <Typography variant={"h4"}>and</Typography>
+                                <ScrollAnimation
+                                    animateIn="bounceIn"
+                                    delay={2500}
+                                    animateOnce
+                                >
+                                    <Typography variant={"h4"}>and</Typography>
+                                </ScrollAnimation>
                             </Grid>
                             <Grid item>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="large"
+                                <ScrollAnimation
+                                    animateIn="bounceIn"
+                                    delay={2750}
+                                    animateOnce
                                 >
-                                    grow them
-                                </Button>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        size="large"
+                                    >
+                                        grow them
+                                    </Button>
+                                </ScrollAnimation>
                             </Grid>
                         </Grid>
                     </Grid>
+
                     <Grid
                         item
                         xs={8}
@@ -195,19 +221,43 @@ const Landing = () => {
                         lg={4}
                         className={classes.currentlyAtDiv}
                     >
-                        <Typography
-                            variant={"h6"}
-                            className={classes.currentlyAtText}
+                        <ScrollAnimation
+                            animateIn="fadeIn"
+                            delay={3250}
+                            duration={2}
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                            animateOnce
                         >
-                            currently at
-                        </Typography>
+                            <Typography
+                                variant={"h6"}
+                                className={classes.currentlyAtText}
+                            >
+                                currently at
+                            </Typography>
+                        </ScrollAnimation>
                     </Grid>
                     <Grid item>
-                        <img
-                            src={fbWordmark}
-                            className={classes.fbWordmark}
-                            alt="facebook"
-                        />
+                        <ScrollAnimation
+                            animateIn="fadeIn"
+                            delay={3250}
+                            duration={2}
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                            animateOnce
+                        >
+                            <img
+                                src={fbWordmark}
+                                className={classes.fbWordmark}
+                                alt="facebook"
+                            />
+                        </ScrollAnimation>
                     </Grid>
                 </Grid>
             </Container>

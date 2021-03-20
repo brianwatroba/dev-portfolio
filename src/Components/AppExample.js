@@ -4,6 +4,7 @@ import { Grid, Typography, Button } from "@material-ui/core";
 
 import LogoCard from "./LogoCard";
 import { PlayCircleFilledWhite } from "@material-ui/icons";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "open sans",
     },
     subtitleTwo: {
-        fontWeight: "400",
+        fontWeight: "200",
         color: "#737373",
         fontStyle: "italic",
         fontFamily: "open sans",
@@ -66,48 +67,66 @@ const AppExample = (props) => {
                 lg={4}
                 className={classes.container}
             >
-                <Grid item>
-                    <Typography variant="h4" className={classes.title}>
-                        {title}
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Typography variant="h6" className={classes.subtitleOne}>
-                        {subtitleOne}
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Typography variant="h7" className={classes.subtitleTwo}>
-                        {subtitleTwo}
-                        {subtitleTwoLinkText && (
-                            <a href={subtitleTwoLinkHref}>
-                                {subtitleTwoLinkText}
-                            </a>
-                        )}
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Typography variant="h6" className={classes.stats}>
-                        {stats}
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.button}
-                        href={buttonLink}
-                    >
-                        check it out
-                    </Button>
-                </Grid>
-                <Grid item>
-                    <img
-                        src={phoneImage}
-                        alt={`${title} screenshot`}
-                        className={classes.phoneImage}
-                    ></img>
-                </Grid>
+                <ScrollAnimation
+                    animateIn="slideInUp"
+                    animateOnce
+                    duration={0.5}
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                    }}
+                >
+                    <Grid item>
+                        <Typography variant="h4" className={classes.title}>
+                            {title}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography
+                            variant="h6"
+                            className={classes.subtitleOne}
+                        >
+                            {subtitleOne}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography
+                            variant="h7"
+                            className={classes.subtitleTwo}
+                        >
+                            {subtitleTwo}
+                            {subtitleTwoLinkText && (
+                                <a href={subtitleTwoLinkHref}>
+                                    {subtitleTwoLinkText}
+                                </a>
+                            )}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography variant="h6" className={classes.stats}>
+                            {stats}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classes.button}
+                            href={buttonLink}
+                        >
+                            check it out
+                        </Button>
+                    </Grid>
+
+                    <Grid item>
+                        <img
+                            src={phoneImage}
+                            alt={`${title} screenshot`}
+                            className={classes.phoneImage}
+                        ></img>
+                    </Grid>
+                </ScrollAnimation>
                 <Grid item>
                     <LogoCard
                         cardLogos={logos}

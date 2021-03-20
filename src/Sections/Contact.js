@@ -74,7 +74,7 @@ const Contact = () => {
                     direction="row"
                 ></Grid>
                 <Grid item>
-                    <Typography variant="h4" className={classes.title}>
+                    <Typography variant="h3" className={classes.title}>
                         want to build?
                     </Typography>
                 </Grid>

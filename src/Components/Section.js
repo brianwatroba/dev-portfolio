@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         paddingBottom: theme.spacing(8),
         position: "relative",
+        borderTop: "1px solid #E8E8E8",
     },
     titleContainer: {
         display: "flex",

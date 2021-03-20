@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     appExampleDiv: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(6),
     },
     mauNumber: {
         textAlign: "center",
@@ -139,6 +139,7 @@ const WhatIBuild = () => {
                             herokuLogo,
                         ]}
                     />
+
                     <AppExample
                         title={"texts from yourself"}
                         subtitleOne={"sms-based journaling app"}

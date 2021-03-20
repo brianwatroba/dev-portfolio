@@ -76,6 +76,7 @@ const Subsection = (props) => {
                         </Typography>
                     </Grid>
                 )}
+
                 <Grid item>
                     <Typography variant={"h6"} className={classes.subtitle}>
                         {subtitle}
@@ -100,7 +101,8 @@ const Subsection = (props) => {
                 {buttonLink && (
                     <Grid item>
                         <Button
-                            size="large"
+                            variant="contained"
+                            disableElevation
                             href={buttonLink}
                             className={classes.button}
                         >
