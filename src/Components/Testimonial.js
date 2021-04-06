@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "right",
     },
     avatar: {
-        height: "60px",
+        height: "53px",
     },
 }));
 
