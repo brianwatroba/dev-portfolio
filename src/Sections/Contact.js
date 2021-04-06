@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button, IconButton } from "@material-ui/core";
 
 import Section from "../Components/Section";
-import FaceCard from "../Components/FaceCard";
+import FaceCardNoAni from "../Components/FaceCardNoAni";
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -79,7 +79,7 @@ const Contact = () => {
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <FaceCard
+                    <FaceCardNoAni
                         type="contact"
                         subtitle={"let's chat."}
                         title={

@@ -67,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
         width: "150px",
         height: "2px",
         backgroundColor: "#808080",
-        marginBottom: theme.spacing(2),
     },
 }));
 
