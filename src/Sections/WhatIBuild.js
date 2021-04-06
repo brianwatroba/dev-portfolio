@@ -194,8 +194,6 @@ const WhatIBuild = () => {
                     xl={8}
                     className={classes.appExampleDiv}
                 >
-                    <Testimonial />
-
                     <AppExample
                         title={"pipeline.gg"}
                         subtitleOne={"learn to livestream like a pro"}
@@ -213,6 +211,7 @@ const WhatIBuild = () => {
                             tailwindLogo,
                         ]}
                     />
+                    <Testimonial />
                 </Grid>
             </Grid>
         </Section>
