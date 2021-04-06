@@ -243,7 +243,7 @@ const Landing = () => {
                     <Grid item>
                         <ScrollAnimation
                             animateIn="fadeIn"
-                            delay={3005}
+                            delay={3250}
                             duration={2}
                             animateOnce
                             style={{
