@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         alignItems: "center",
         marginRight: theme.spacing(1),
+        marginTop: theme.spacing(2),
     },
     authorAndTitle: {
         display: "flex",
@@ -45,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "flex-end",
         alignItems: "center",
         marginRight: theme.spacing(1),
+        textAlign: "right",
     },
     avatar: {
         height: "60px",
@@ -67,10 +69,18 @@ const Testimonial = ({ quote, author, title, avatar }) => {
                 <div className={classes.attributionDiv}>
                     <div className={classes.attributionContent}>
                         <div className={classes.authorAndTitle}>
-                            <Typography variant="body1" component="div">
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                style={{ textAlign: "right" }}
+                            >
                                 jason chen
                             </Typography>
-                            <Typography variant="subtitle2" component="div">
+                            <Typography
+                                variant="subtitle2"
+                                component="div"
+                                style={{ textAlign: "right" }}
+                            >
                                 cto, pipeline
                             </Typography>
                         </div>
