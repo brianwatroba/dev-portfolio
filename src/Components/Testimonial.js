@@ -57,9 +57,7 @@ const Testimonial = ({ quote, author, title, avatar }) => {
 			<Paper className={classes.paper} elevation={0}>
 				<div className={classes.quoteDiv}>
 					<Typography variant="h6" style={{ fontWeight: 300 }}>
-						“for our app relaunch, we acheived a level of polish that couldn’t
-						have happened without Brian. we’re super appreciative of the
-						timeliness and cleanliness of the code he committed.”
+						{quote}
 					</Typography>
 				</div>
 				<div className={classes.attributionDiv}>
@@ -70,17 +68,17 @@ const Testimonial = ({ quote, author, title, avatar }) => {
 								component="div"
 								style={{ textAlign: 'right' }}
 							>
-								jason chen
+								{author}
 							</Typography>
 							<Typography
 								variant="subtitle2"
 								component="div"
 								style={{ textAlign: 'right' }}
 							>
-								cto, pipeline
+								{title}
 							</Typography>
 						</div>
-						<img src={honeyshanks} className={classes.avatar} alt="avatar" />
+						<img src={avatar} className={classes.avatar} alt="avatar" />
 					</div>
 				</div>
 			</Paper>
