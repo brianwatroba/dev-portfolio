@@ -184,6 +184,8 @@ const WhatIBuild = () => {
 					justify="center"
 					direction="row"
 					xs={12}
+					md={8}
+					lg={8}
 					xl={8}
 					className={classes.appExampleDiv}
 				>
