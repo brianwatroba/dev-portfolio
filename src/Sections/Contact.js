@@ -10,6 +10,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
 import FreeBreakfastIcon from "@material-ui/icons/FreeBreakfast";
+import TwitterIcon from "@material-ui/icons/Twitter";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -111,13 +112,19 @@ const Contact = () => {
                     direction="row"
                 >
                     <Grid item>
+                        <IconButton href="https://github.com/brianwatroba">
+                            <GitHubIcon className={classes.icon} />
+                        </IconButton>
+                    </Grid>
+                    <Grid item>
                         <IconButton href="https://www.linkedin.com/in/brian-watroba-649a93b0/">
                             <LinkedInIcon className={classes.icon} />
                         </IconButton>
                     </Grid>
+
                     <Grid item>
-                        <IconButton href="https://github.com/brianwatroba">
-                            <GitHubIcon className={classes.icon} />
+                        <IconButton href="https://www.twitter.com/brianwatroba">
+                            <TwitterIcon className={classes.icon} />
                         </IconButton>
                     </Grid>
                     <Grid item>
