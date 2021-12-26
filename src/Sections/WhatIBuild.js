@@ -223,7 +223,7 @@ const WhatIBuild = () => {
           <Testimonial
             quote="“i wanted a fresh, edgy take on a photography portfolio site, and brian brought my ideas to life--and then some. he's a super talented developer with a sharp eye for design.”"
             author="jesse lirola"
-            title="photographer"
+            title="celebrity photographer"
             avatar={jesseLirolaHeadshot}
           />
         </Grid>

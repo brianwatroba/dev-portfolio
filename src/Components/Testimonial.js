@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
-    alignItems: "center",
+
     marginRight: theme.spacing(1),
     textAlign: "right",
   },
@@ -65,14 +65,22 @@ const Testimonial = ({ quote, author, title, avatar }) => {
               <Typography
                 variant="body1"
                 component="div"
-                style={{ textAlign: "right" }}
+                style={{
+                  textAlign: "right",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
               >
                 {author}
               </Typography>
               <Typography
                 variant="subtitle2"
                 component="div"
-                style={{ textAlign: "right" }}
+                style={{
+                  textAlign: "right",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
               >
                 {title}
               </Typography>
