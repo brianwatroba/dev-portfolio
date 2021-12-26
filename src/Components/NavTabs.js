@@ -1,37 +1,27 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Tabs, Tab } from '@material-ui/core';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Tabs, Tab } from "@material-ui/core";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   tab: {
-    textTransform: 'none',
-    fontWeight: '400',
-    fontSize: '1rem',
+    textTransform: "none",
+    fontWeight: "400",
+    fontSize: "1rem",
     minWidth: 9,
-    color: '#989898',
-    '&:hover': {
-      color: '#333333',
+    color: "#989898",
+    "&:hover": {
+      color: "#333333",
     },
   },
 }));
 
 const NavTabs = () => {
   const classes = useStyles();
-  const handleChange = () => {
-    console.log('hi');
-  };
 
   return (
     <>
-      <Link
-        // activeClass="active"
-        to="aboutMe"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >
+      <Link to="aboutMe" spy={true} smooth={true} offset={-70} duration={500}>
         move
       </Link>
       <Tabs indicatorColor="none">
