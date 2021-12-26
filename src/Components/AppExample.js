@@ -92,6 +92,7 @@ const AppExample = (props) => {
           <Button
             variant="contained"
             color="primary"
+            disableElevation
             className={classes.button}
             href={buttonLink}
           >

@@ -5,6 +5,7 @@ import { Grid, Typography } from "@material-ui/core";
 import Section from "../Components/Section";
 import AppExample from "../Components/AppExample";
 import Testimonial from "../Components/Testimonial";
+import DividerText from "../Components/DividerText";
 
 import spyfallPhone from "../Images/spyfallphone.png";
 import loveQuotesPhone from "../Images/lovequotesphone.png";
@@ -153,25 +154,7 @@ const WhatIBuild = () => {
             ]}
           />
         </Grid>
-        <div>
-          <Typography
-            component="div"
-            variant="h5"
-            className={classes.ownershipTitle}
-          >
-            other contributions
-          </Typography>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            <div className={classes.divider} />
-          </div>
-        </div>
+        <DividerText title="other contributions" />
         <Grid
           container
           alignContent="center"
