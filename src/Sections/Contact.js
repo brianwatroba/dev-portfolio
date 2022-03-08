@@ -67,13 +67,7 @@ const Contact = () => {
   return (
     <>
       <Section title={"contact"} backgroundColor={"#FFFFFF"} id="contact">
-        <Grid
-          container
-          xs={12}
-          alignItems="center"
-          justify="center"
-          direction="row"
-        ></Grid>
+        <Grid container xs={12} alignItems="center" justify="center" direction="row"></Grid>
         <Grid item>
           <Typography variant="h3" className={classes.title}>
             want to build?
@@ -97,11 +91,7 @@ const Contact = () => {
           />
         </Grid>
         <Grid item>
-          <Typography
-            variant="h6"
-            component="div"
-            className={classes.socialsTitle}
-          >
+          <Typography variant="h6" component="div" className={classes.socialsTitle}>
             or find me here:
           </Typography>
         </Grid>
@@ -117,7 +107,7 @@ const Contact = () => {
             </IconButton>
           </Grid>
           <Grid item>
-            <IconButton href="https://www.twitter.com/bwatroba">
+            <IconButton href="https://www.twitter.com/brianwatroba">
               <TwitterIcon className={classes.icon} />
             </IconButton>
           </Grid>
